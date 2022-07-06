@@ -1,11 +1,26 @@
-import './App.css';
+import "./App.css";
+import LineChartGraph from "./Chart";
+import {
+  barChartOptions,
+  columnChartOptions,
+  lineChartOptions,
+} from "./options";
+import { exportMultipleChartsToPdf } from "./utils";
+import ChartHigh from "./ChartHigh";
 
 function App() {
   return (
     <div className="App">
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+      <button className="button" onClick={exportMultipleChartsToPdf}>
+        Export to PDF
+      </button>
+      <ChartHigh chartOptions={lineChartOptions} />
+      <ChartHigh chartOptions={barChartOptions} />
+      <ChartHigh chartOptions={columnChartOptions} />
+      <div className="row">
+        <ChartHigh chartOptions={lineChartOptions} />
+        <ChartHigh chartOptions={columnChartOptions} />
+      </div>
     </div>
   );
 }
