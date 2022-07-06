@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.basket path {
+  stroke: #fff;
+  stroke-width: 1;
+}
+
+.add_cart:hover {
+  color: green;
+}
+
+.remove_cart:hover {
+  color: red;
+}
