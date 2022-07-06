@@ -4,7 +4,7 @@ import * as htmlToImage from "html-to-image";
 export async function exportMultipleChartsToPdf() {
   const doc = new jsPDF("p", "px");
 
-  const elements = document.getElementsByClassName("custom-chart");
+  const elements = document.getElementsByClassName("selected");
 
   await creatPdf({ doc, elements });
 

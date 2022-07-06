@@ -1,9 +1,9 @@
 import HighchartsReact from "highcharts-react-official";
 import Highcharts from "highcharts";
 
-export default function ChartHigh({ chartOptions }) {
+export default function ChartHigh({ chartOptions, chartValue }) {
   return (
-    <div className="custom-chart">
+    <div className={chartValue ? "custom-chart selected" : "custom-chart"}>
       <HighchartsReact
         highcharts={Highcharts}
         options={chartOptions}
